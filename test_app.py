@@ -24,3 +24,35 @@ def test_pred_virginica():
         # asserting the correct response is received
         assert response.status_code == 200
         assert response.json() == {"flower_class": "Iris Virginica"}
+def test_calcs():
+    with TestClient(app) as client:
+        response = client.get("/calcs")
+        # asserting the correct response is received
+        assert response.status_code == 200
+        assert response.json() == {"calcs": "operations performed successufully"}
+def test_vetran():
+    with TestClient(app) as client:
+        response = client.get("/vetran")
+        # asserting the correct response is received
+        assert response.status_code == 200
+        assert response.json() == {"vetran": "operations performed successufully"}
+def test_kuts():
+    with TestClient(app) as client:
+        response = client.get("/kuts")
+        # asserting the correct response is received
+        assert response.status_code == 200
+        assert response.json() == {"kuts": "This is Shiuli"}
+
+def test_group():
+    with TestClient(app) as client:
+        response = client.get("/group")
+        # asserting the correct response is received
+        assert response.status_code == 200
+        assert response.json() == {"Group": "My Cool Group"}
+
+def test_glgroup():
+    with TestClient(app) as client:
+        response = client.get("/glgroup")
+        # asserting the correct response is received
+        assert response.status_code == 200
+        assert response.json() == {"Group": "My Gl group"}

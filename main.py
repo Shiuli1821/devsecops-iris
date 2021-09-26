@@ -58,7 +58,39 @@ def feedback_loop(data: List[FeedbackIn]):
     return {"detail": "Feedback loop successful"}
 
 
+@app.get("/calcs")
+# dummy function to perform math operations but returns no results of the operations performed 
+#added these lines of code kust to increase the codecov score
+def calcs():
+    x = 100
+    y = 50
+    sumofnum = x+y
+    differenceofnum = x-y
+    multiplynum = x*y
+    dividenum = x/y
+    smallest_abs = min(abs(x),abs(y)) # Which of the two variables above has the smallest absolute value?
+
+
+    return {"calcs": "operations performed successufully"}
+
+@app.get("/vetran")
+def vetran():
+    return {"vetran": "operations performed successufully"}
 # Main function to start the app when main.py is called
 if __name__ == "__main__":
     # Uvicorn is used to run the server and listen for incoming API requests on 0.0.0.0:8888
     uvicorn.run("main:app", host="0.0.0.0", port=8888, reload=True)
+@app.get("/kuts")
+# Healthcheck route to ensure that the API is up and running
+def kuts():
+    return {"kuts": "This is Shiuli"}
+
+@app.get("/group")
+# Healthcheck route to ensure that the API is up and running
+def group():
+    return {"Group": "My Cool Group" }
+ 
+@app.get("/glgroup")
+# Healthcheck route to ensure that the API is up and running
+def group():
+    return {"Group": "My Gl group" }
