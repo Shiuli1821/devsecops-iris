@@ -6,7 +6,7 @@ This repository contains code which demonstrates Dev-Sec-Ops using a `FastAPI` a
 
 ## Running Instructions
 - Create a fork of the repo using the `fork` button.
-- Clone your fork using `git clone https://www.github.com/<your-username>/mlops-iris.git`
+- Clone your fork using `git clone https://github.com/Shiuli1821/devsecops-iris`
 - Install dependencies using `pip3 install -r requirements.txt`
 - Run application using `python3 main.py`
 - Run tests using `pytest`
